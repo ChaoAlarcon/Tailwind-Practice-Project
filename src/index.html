@@ -5,21 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Link to Tailwind CSS output -->
+    <!-- Link to Tailwind CSS stylesheet -->
     <link href="./output.css" rel="stylesheet">
 </head>
-<body>
+<body class="font-inter">
     <!-- Header Section -->
     <header class="flex justify-between mx-5 my-5 sm:mx-20">
         <!-- Logo -->
         <div class="text-3xl font-bold">W.</div>
         
         <!-- Navigation -->
-        <nav>
-            <!-- Mobile Menu Button -->
-            <button class="flex h-full items-center sm:hidden">
-                <img src="./assets/images/icon-menu.svg" alt="menu">
-            </button>
+        <nav class="text-xs flex items-center">
+            <!-- Mobile Menu Toggle -->
+            <input type="checkbox" id="menu-toggle" class="peer hidden" />
+            <label for="menu-toggle" class="z-10 bg-open peer-checked:bg-close block w-10 h-5 bg-cover bg-center cursor-pointer transition-all sm:hidden"></label>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="fixed inset-0 w-full bg-gray-700/75 translate-x-full peer-checked:translate-x-0 transition-transform flex justify-end">
+                <ul class="flex flex-col gap-5 text-lg pt-40 pl-5 bg-white h-full w-60">
+                    <li>Home</li>
+                    <li>New</li>
+                    <li>Popular</li>
+                    <li>Trending</li>
+                    <li>Categories</li>
+                </ul>
+            </div>
             
             <!-- Desktop Navigation Links -->
             <ul class="hidden sm:flex sm:gap-6 sm:h-full sm:items-center">
@@ -32,12 +42,12 @@
         </nav>
     </header>
 
-    <!-- Main Content Section -->
+    <!-- Main Section -->
     <main class="mx-5 my-5 sm:flex sm:gap-4 sm:mx-20">
         <!-- Main Article Section -->
         <section class="flex flex-col gap-4 sm:w-2/3">
             <!-- Article Image -->
-            <img src="./assets/images/image-web-3-desktop.jpg" alt="Imagen de la noticia" class="h-80 object-cover sm:h-full">
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="News Image" class="h-80 object-cover sm:h-full">
             
             <!-- Article Content -->
             <div class="flex flex-col gap-4 sm:flex-row">
@@ -54,8 +64,64 @@
             </div>
         </section>
         
-        <!-- Sidebar Section (currently empty) -->
-        <aside></aside>
+        <!-- Sidebar Section -->
+        <aside class="bg-slate-900 my-10 p-4 sm:w-1/3 sm:my-0">
+            <!-- Sidebar Title -->
+            <h2 class="text-orange-600 text-2x1 font-bold">New</h2>
+            
+            <!-- First Sidebar Article -->
+            <div class="py-4">
+                <h3 class="text-white text-sm font-bold">Hydrogen VS Electric Cars</h3>
+                <p class="text-slate-300 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            
+            <!-- Second Sidebar Article -->
+            <div class="py-4 border-t border-b border-slate-300">
+                <h3 class="text-white text-sm font-bold">The Downsides of AI Artistry</h3>
+                <p class="text-slate-300 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            
+            <!-- Third Sidebar Article -->
+            <div class="py-4">
+                <h3 class="text-white text-sm font-bold">Is VC Funding Drying up?</h3>
+                <p class="text-slate-300 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </aside>
     </main>
+
+    <!-- Additional Articles Section -->
+    <div class="mx-5 my-10 sm:mx-20">
+        <ul class="flex flex-col gap-4 sm:flex-row">
+            <!-- First Additional Article -->
+            <li class="flex gap-4">
+                <img src="./assets/images/image-retro-pcs.jpg" alt="Retro Image" class="w-20">
+                <div>
+                    <h2 class="text-slate-300 font-bold">01</h2>
+                    <h3 class=" font-bold">Reviving Retro PCs</h3>
+                    <p class="text-xs">What happens when old PCs are given modern updates?</p>
+                </div>
+            </li>
+            
+            <!-- Second Additional Article -->
+            <li class="flex gap-4">
+                <img src="./assets/images/image-top-laptops.jpg" alt="Top Laptops Image" class="w-20">
+                <div>
+                    <h2 class="text-slate-300 font-bold">02</h2>
+                    <h3 class="font-bold">Top 10 Laptops of 2025</h3>
+                    <p class="text-xs">Our best picks for various needs and budgets.</p>
+                </div>
+            </li>
+            
+            <!-- Third Additional Article -->
+            <li class="flex gap-4">
+                <img src="./assets/images/image-gaming-growth.jpg" alt="Gaming Growth Image" class="w-20">
+                <div>
+                    <h2 class="text-slate-300 font-bold">03</h2>
+                    <h3 class="font-bold">The Growth of Gaming</h3>
+                    <p class="text-xs">How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
