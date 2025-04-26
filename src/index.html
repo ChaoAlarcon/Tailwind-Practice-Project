@@ -1,24 +1,61 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to Tailwind CSS output -->
+    <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <header class="flex justify-between mx-5 my-5 sm:mx-20">
-  <div class="text-3xl font-bold">W.</div>
-   <nav>
-   <button class="flex h-full items-center sm:hidden">
-   <img src="./assets/images/icon-menu.svg" alt="menu" >
-   </button>
-   <ul class="hidden sm:flex sm:gap-6 sm:h-full sm:items-center ">
-   <li>Home</li>
-   <li>New</li>
-   <li>Popular</li>
-   <li>Trending</li>
-   <li>Categories</li>
-    </ul>
-  </header>
+    <!-- Header Section -->
+    <header class="flex justify-between mx-5 my-5 sm:mx-20">
+        <!-- Logo -->
+        <div class="text-3xl font-bold">W.</div>
+        
+        <!-- Navigation -->
+        <nav>
+            <!-- Mobile Menu Button -->
+            <button class="flex h-full items-center sm:hidden">
+                <img src="./assets/images/icon-menu.svg" alt="menu">
+            </button>
+            
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden sm:flex sm:gap-6 sm:h-full sm:items-center">
+                <li>Home</li>
+                <li>New</li>
+                <li>Popular</li>
+                <li>Trending</li>
+                <li>Categories</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="mx-5 my-5 sm:flex sm:gap-4 sm:mx-20">
+        <!-- Main Article Section -->
+        <section class="flex flex-col gap-4 sm:w-2/3">
+            <!-- Article Image -->
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="Imagen de la noticia" class="h-80 object-cover sm:h-full">
+            
+            <!-- Article Content -->
+            <div class="flex flex-col gap-4 sm:flex-row">
+                <!-- Article Title -->
+                <h1 class="text-4xl font-bold sm:w-1/2">The Bright Future of Web 3.0</h1>
+                
+                <!-- Article Description and Button -->
+                <div class="flex flex-col justify-between gap-4 items-start sm:w-1/2">
+                    <p class="text-xs">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.
+                    </p>
+                    <button class="bg-orange-600 hover:bg-slate-900 text-white px-3 py-1 tracking-widest">READ MORE</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sidebar Section (currently empty) -->
+        <aside></aside>
+    </main>
 </body>
 </html>
